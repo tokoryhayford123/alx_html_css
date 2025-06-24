@@ -1,0 +1,26 @@
+/* Base styles from previous tasks */
+@import url('4-styles.css');
+
+/* Animation Keyframe */
+@keyframes floatUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animation styles */
+.animate {
+  animation: floatUp 0.8s ease-out;
+  opacity: 1;
+}
+
+.service.animate:hover,
+.circle.animate:hover {
+  transform: scale(1.05) rotate(2deg);
+  transition: transform 0.3s ease-in-out;
+}
