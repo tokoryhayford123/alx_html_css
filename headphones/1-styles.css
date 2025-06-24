@@ -1,0 +1,155 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --primary-color: #FF6565;
+  --max-width: 1000px;
+  --font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Base styles */
+body {
+  font-family: var(--font-family);
+  line-height: 1.6;
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+.site-header {
+  background: url('../images/headphones_hero_1.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:active {
+  color: var(--primary-color);
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: opacity 0.3s ease;
+}
+
+.btn:hover,
+.btn:active {
+  opacity: 0.9;
+}
+
+/* What we do section */
+.what-we-do {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.what-we-do h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  margin-bottom: 40px;
+  color: #666;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.service {
+  flex: 1 1 45%;
+  max-width: 45%;
+  text-align: center;
+}
+
+.service .icon {
+  font-size: 50px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.service h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.service p {
+  color: #666;
+  font-size: 0.95em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header .container {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 1.8em;
+  }
+}
